@@ -5,11 +5,16 @@ public class Begin {
 	OperateorJump orj = new OperateorJump();
 
 	Begin(){
-		System.out.println("Begin");
+		//System.out.println("Begin");
+		//property.record += (++ property.number) + "|" + property.id + "|" + property.name + "|" + property.time;
+		//System.out.println(property.record);
+		property.addrecord("Begin");
 		property.isnormalend = orj.JumporNot();
-		
-		if( property.isnormalend == 1 ){
-			return;
+
+		while (property.isnormalend == 1) {
+			//System.out.println("Wait");
+			property.addrecord("Wait");
+			property.isnormalend = orj.JumporNot();
 		}
 		nextbehaviour();
 	}
@@ -22,6 +27,5 @@ public class Begin {
 		}
 		else
 			return;
-			//end.end(0);
 	}
 }

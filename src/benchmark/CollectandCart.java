@@ -5,12 +5,14 @@ public class CollectandCart {
 	OperateorJump orj = new OperateorJump();
 
 	CollectandCart(){
-		System.out.println("Collect and Cart");
+
 		property.isnormalend = orj.JumporNot();
 		
 		if( property.isnormalend == 1 ){
 			return;
 		}
+		//System.out.println("Collect and Cart");
+		property.addrecord("Collect and Cart");
 		CollectandCart.nextbehaviour();
 	}
 	

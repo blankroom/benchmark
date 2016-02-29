@@ -5,12 +5,13 @@ public class Buy {
 	OperateorJump orj = new OperateorJump();
 
 	Buy(){
-		System.out.println("Buy");
-		property.isnormalend = orj.JumporNot();
+		//System.out.println("Buy");
+		property.addrecord("Buy");
+		/*property.isnormalend = orj.JumporNot();
 		
 		if( property.isnormalend == 1 ){
 			return;
-		}
+		}*/
 		Buy.nextbehaviour();
 		//System.out.println("end");
 	}
