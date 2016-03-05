@@ -9,14 +9,15 @@ public class OperateorJump {
 		jumprate = Math.random();
 		
 		if( jumprate < 0.05 ){
-			System.out.println("Pause");
-			return ContinueorBegin();
+			//System.out.println("Pause");
+			//return ContinueorBegin();
+			return 1;
 		}
 		
 		return 0;
 	}
 	
-	public int ContinueorBegin(){
+	/*public int ContinueorBegin(){
 		continuerate = Math.random();
 		
 		if( continuerate < 0.9 ){
@@ -27,6 +28,6 @@ public class OperateorJump {
 			System.out.println("Beginagain");
 			return 1;
 		}
-	}
+	}*/
 	
 }

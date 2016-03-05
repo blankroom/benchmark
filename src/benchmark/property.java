@@ -27,7 +27,7 @@ public class property {
 			property.record += (++property.number) + "|" + property.id + "|" + property.name + "|" + behavetype + "|" + property.time + "\n";
 			property.time = new Date(property.time.getTime() + 1000 * 60 * 2);
 		}
-		if (behavetype.equals("Collect and Cart")) {
+		if (behavetype.equals("AddCollect") || behavetype.equals("DeleteCollect") || behavetype.equals("AddCart") || behavetype.equals("DeleteCart")) {
 			property.record += (++property.number) + "|" + property.id + "|" + property.name + "|" + behavetype + "|" + property.time + "\n";
 			property.time = new Date(property.time.getTime() + 1000 * 60 * 2);
 		}
