@@ -1,8 +1,8 @@
 package benchmark;
 
 public class SearchandBrowse {
-	
-	OperateorJump orj = new OperateorJump();
+
+	private OperateorJump orj = new OperateorJump();
 
 	SearchandBrowse(){
 		property.isnormalend = orj.JumporNot();
@@ -20,9 +20,11 @@ public class SearchandBrowse {
 		if (SearchorBrowse < 0.5)
 			//System.out.println("Search");
 			property.addrecord("Search");
-		else
+		else {
 			//System.out.println("Browse");
 			property.addrecord("Browse");
+			property.browseQueue.addpro();
+		}
 
 		nextnextbehaviour();
 	}
@@ -36,11 +38,9 @@ public class SearchandBrowse {
 		}
 		if ( SearchandBrowserate >= 0.6 && SearchandBrowserate < 0.7 ){
 			CollectandCart cc = new CollectandCart();
-			return;
 		}
 		else if( SearchandBrowserate >= 0.7 && SearchandBrowserate < 1 ){
 			Buy buy = new Buy();
-			return;
 		}
 	}
 	
