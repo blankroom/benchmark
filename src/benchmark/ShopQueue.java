@@ -51,4 +51,14 @@ public class ShopQueue extends ArrayList {
     	
     }
 
+    public String randomremove() {
+        if (isEmpty()) {
+            return null;
+        } else {
+            Random randomIndex = new Random();
+            int index = randomIndex.nextInt(size());
+            return (String) remove(index);
+        }
+    }
+
 }

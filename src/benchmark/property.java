@@ -12,11 +12,13 @@ public class property {
 	//public static String behaviour = new String();
 
 	public static BrowseQueue browseQueue = new BrowseQueue();
+	public static CollectQueue collectQueue = new CollectQueue();
+	public static CartQueue cartQueue = new CartQueue();
 
 	public static Date time = new Date();
 	public static SimpleDateFormat sdt = new SimpleDateFormat("yyyy-MM-dd");
 	public static String begintime = "2016-01-01";
-	public static String endtime = "2016-01-02";
+	public static String endtime = "2016-01-08";
 
 	public static String record = "";
 

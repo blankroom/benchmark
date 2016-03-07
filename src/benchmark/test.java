@@ -19,8 +19,15 @@ public class test {
 		}
 		System.out.println(property.record);
 		for (int i = 0; i < property.browseQueue.size(); i++) {
-			System.out.println(property.browseQueue.get(i));
+			System.out.println("browsequeue  = " + property.browseQueue.get(i));
 		}
+		for (int i = 0; i < property.cartQueue.size(); i++) {
+			System.out.println("cartqueue  = " + property.cartQueue.get(i));
+		}
+		for (int i = 0; i < property.collectQueue.size(); i++) {
+			System.out.println("collectqueue  = " + property.collectQueue.get(i));
+		}
+		System.out.println(property.browseQueue.randomget());
 	}
 
 }

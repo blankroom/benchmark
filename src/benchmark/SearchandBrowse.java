@@ -16,6 +16,7 @@ public class SearchandBrowse {
 	}
 
 	public void nextbehaviour(){
+		property.browseQueue.addpro();
 		double SearchorBrowse = Math.random();
 		if (SearchorBrowse < 0.5)
 			//System.out.println("Search");
@@ -23,7 +24,6 @@ public class SearchandBrowse {
 		else {
 			//System.out.println("Browse");
 			property.addrecord("Browse");
-			property.browseQueue.addpro();
 		}
 
 		nextnextbehaviour();

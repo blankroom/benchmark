@@ -37,15 +37,19 @@ public class CollectandCart {
 		String behaviour = null;
 		if (judgerate < 0.25) {
 			behaviour = "AddCollect";
+			property.collectQueue.addpro();
 		}
 		if (judgerate >= 0.25 && judgerate < 0.5) {
 			behaviour = "DeleteCollect";
+			property.collectQueue.randomremove();
 		}
 		if (judgerate >= 0.5 && judgerate < 0.75) {
 			behaviour = "AddCart";
+			property.cartQueue.addpro();
 		}
 		if (judgerate >= 0.75) {
 			behaviour = "DeleteCart";
+			property.cartQueue.randomremove();
 		}
 		return behaviour;
 	}
