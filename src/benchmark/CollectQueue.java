@@ -5,14 +5,12 @@ public class CollectQueue extends ShopQueue{
 		maxsize = 5;
 	}
 
-	public boolean addpro() {
+	public String addpro() {
 		String e = getItemFromOtherQueue();
-		if (!isFull()) {
-			return add(e);
-		} else {
+		if (isFull())
 			remove(0);
-			return add(e);
-		}
+		add(e);
+		return e;
 	}
 
 	public String getItemFromOtherQueue() {

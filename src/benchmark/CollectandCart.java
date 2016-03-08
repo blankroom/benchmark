@@ -12,7 +12,9 @@ public class CollectandCart {
 			return;
 		}
 		//System.out.println("Collect and Cart");
-		property.addrecord(whatbehaviour());
+		String behaviour = whatbehaviour();
+		if (behaviour != null)
+			property.addrecord(behaviour);
 		nextbehaviour();
 	}
 
@@ -41,7 +43,8 @@ public class CollectandCart {
 		}
 		if (judgerate >= 0.25 && judgerate < 0.5) {
 			behaviour = "DeleteCollect";
-			property.collectQueue.randomremove();
+			if (property.collectQueue.randomremove() == null)
+				behaviour = null;
 		}
 		if (judgerate >= 0.5 && judgerate < 0.75) {
 			behaviour = "AddCart";
@@ -49,7 +52,8 @@ public class CollectandCart {
 		}
 		if (judgerate >= 0.75) {
 			behaviour = "DeleteCart";
-			property.cartQueue.randomremove();
+			if (property.cartQueue.randomremove() == null)
+				behaviour = null;
 		}
 		return behaviour;
 	}

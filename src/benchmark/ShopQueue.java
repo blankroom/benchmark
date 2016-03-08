@@ -17,14 +17,12 @@ public class ShopQueue extends ArrayList {
         return (size() == maxsize);
     }
 
-    public boolean addpro() {
+    public String addpro() {
         String e = getItemFromFile();
-        if (!isFull())
-            return add(e);
-        else {
+        if (isFull())
             remove(0);
-            return add(e);
-        }
+        add(e);
+        return e;
     }
 
     public String getItemFromFile() {

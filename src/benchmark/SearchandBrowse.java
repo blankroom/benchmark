@@ -10,13 +10,12 @@ public class SearchandBrowse {
 		if( property.isnormalend == 1 ){
 			return;
 		}
-
-		//System.out.println("Search and Browse");
 		nextbehaviour();
 	}
 
 	public void nextbehaviour(){
-		property.browseQueue.addpro();
+		//property.browseQueue.addpro();
+		String item = chooseNewOrOld();
 		double SearchorBrowse = Math.random();
 		if (SearchorBrowse < 0.5)
 			//System.out.println("Search");
@@ -42,6 +41,14 @@ public class SearchandBrowse {
 		else if( SearchandBrowserate >= 0.7 && SearchandBrowserate < 1 ){
 			Buy buy = new Buy();
 		}
+	}
+
+	public String chooseNewOrOld() {
+		double rate = Math.random();
+		if (rate < 0.6 || property.browseQueue.isEmpty())
+			return property.browseQueue.addpro();
+		else
+			return property.browseQueue.randomget();
 	}
 	
 }
