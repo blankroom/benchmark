@@ -25,21 +25,28 @@ public class property {
 	public static void addrecord(String behavetype) {
 		id = "Customer#0001";
 		name = "Customer#0001";
-		double time_random = Math.random();
-		time_random += 2;
+		double time_random;
 		if (behavetype.equals("Begin")) {
 			property.record += (++property.number) + "|" + property.id + "|" + property.name + "|" + behavetype + "|" + property.time + "\n";
+			time_random = Math.random() + 2;
 			property.time = new Date((long) (property.time.getTime() + 1000 * 60 * 60 * time_random));
 		}
 		if (behavetype.equals("Search") || behavetype.equals("Browse")) {
 			property.record += (++property.number) + "|" + property.id + "|" + property.name + "|" + behavetype + "|" + property.time + "\n";
+			time_random = Math.random() + 2;
 			property.time = new Date((long) (property.time.getTime() + 1000 * 60 * time_random));
 		}
 		if (behavetype.equals("AddCollect") || behavetype.equals("DeleteCollect") || behavetype.equals("AddCart") || behavetype.equals("DeleteCart")) {
 			property.record += (++property.number) + "|" + property.id + "|" + property.name + "|" + behavetype + "|" + property.time + "\n";
+			time_random = Math.random() + 2;
 			property.time = new Date((long) (property.time.getTime() + 1000 * 60 * time_random));
 		}
 		if (behavetype.equals("Buy")) {
+			property.record += (++property.number) + "|" + property.id + "|" + property.name + "|" + behavetype + "|" + property.time + "\n";
+			//time_random = Math.random()+3;
+			//property.time = new Date((long) (property.time.getTime() + 1000 * 60 * 60 * 24 * time_random));
+		}
+		if (behavetype.equals("Comment")) {
 			property.record += (++property.number) + "|" + property.id + "|" + property.name + "|" + behavetype + "|" + property.time + "\n";
 		}
 	}

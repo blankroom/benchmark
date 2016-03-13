@@ -7,13 +7,9 @@ public class Buy {
 	Buy(){
 		//System.out.println("Buy");
 		property.addrecord("Buy");
-		/*property.isnormalend = orj.JumporNot();
-		
-		if( property.isnormalend == 1 ){
-			return;
-		}*/
+
 		Buy.nextbehaviour();
-		//System.out.println("end");
+
 	}
 	
 	public static void nextbehaviour(){
