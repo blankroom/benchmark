@@ -16,6 +16,7 @@ public class property {
 	public static CartQueue cartQueue = new CartQueue();
 
 	public static Date time = new Date();
+	public static Date buytime = new Date();
 	public static SimpleDateFormat sdt = new SimpleDateFormat("yyyy-MM-dd");
 	public static String begintime = "2016-01-01";
 	public static String endtime = "2016-01-08";
@@ -47,7 +48,9 @@ public class property {
 			//property.time = new Date((long) (property.time.getTime() + 1000 * 60 * 60 * 24 * time_random));
 		}
 		if (behavetype.equals("Comment")) {
-			property.record += (++property.number) + "|" + property.id + "|" + property.name + "|" + behavetype + "|" + property.time + "\n";
+			property.record += (++property.number) + "|" + property.id + "|" + property.name + "|" + behavetype + "|" + property.buytime + "\n";
+			time_random = Math.random() + 2;
+			property.buytime = new Date((long) (property.time.getTime() + 1000 * 60 * 60 * 24 * time_random));
 		}
 	}
 }
