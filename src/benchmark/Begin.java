@@ -24,7 +24,7 @@ public class Begin {
 			property.time = new Date(property.time.getTime() + 1000 * 60 * 60 * 2);
 			Beginrate = Math.random();
 		}
-		property.addrecord("Begin");
+		property.addrecord("Begin", " ");
 		SearchandBrowse sb = new SearchandBrowse();
 	}
 }

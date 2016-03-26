@@ -25,17 +25,17 @@ public class ShopQueue extends ArrayList {
         return e;
     }
 
-    public String getItemFromFile() {
+    public String getItemFromFile() {//并不需要通过文件来得到商品，目前没有商品之间的特殊性，所以就直接随机商品数字即可
         Random randomLine = new Random();
-        try {
-            File file = new File("C:/Users/虚室空白/IdeaProjects/benchmark/src/item.txt");
-            RandomAccessFile raf = new RandomAccessFile(file, "r");
-            raf.seek(randomLine.nextInt(1000) * 11);
-            return raf.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return null;
+        //try {
+        //File file = new File("C:/Users/虚室空白/IdeaProjects/benchmark/src/item.txt");
+        //RandomAccessFile raf = new RandomAccessFile(file, "r");
+        //raf.seek(randomLine.nextInt(1000) * 11);
+        return String.valueOf(randomLine.nextInt(1000000));
+        //} catch (IOException e) {
+        //e.printStackTrace();
+        //}
+        //return null;
     }
     
     public String randomget(){

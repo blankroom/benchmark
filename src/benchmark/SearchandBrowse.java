@@ -19,16 +19,16 @@ public class SearchandBrowse {
 		double SearchorBrowse = Math.random();
 		if (SearchorBrowse < 0.5)
 			//System.out.println("Search");
-			property.addrecord("Search");
+			property.addrecord("Search", item);
 		else {
 			//System.out.println("Browse");
-			property.addrecord("Browse");
+			property.addrecord("Browse", item);
 		}
 
-		nextnextbehaviour();
+		nextnextbehaviour(item);
 	}
 
-	public void nextnextbehaviour() {
+	public void nextnextbehaviour(String item) {
 		double SearchandBrowserate = Math.random();
 		if (SearchandBrowserate < 0.6) {
 			/*System.out.println("Search and Browse");
@@ -39,7 +39,7 @@ public class SearchandBrowse {
 			CollectandCart cc = new CollectandCart();
 		}
 		else if( SearchandBrowserate >= 0.7 && SearchandBrowserate < 1 ){
-			Buy buy = new Buy();
+			Buy buy = new Buy(item);
 		}
 	}
 
